@@ -95,8 +95,8 @@ public class JobData {
         for (HashMap<String, String> entry : allJobs) {
 
             for (String key : entry.keySet()){
-                String val = (entry.get(key));
-                if (val.contains(value)) {
+                String val = (entry.get(key)).toUpperCase();
+                if (val.contains(value.toUpperCase())) {
                     jobsByValue.add(entry);
                     break;
                 }
